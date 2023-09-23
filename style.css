@@ -220,7 +220,7 @@ input:focus,textarea:focus{
   background: var(--bgs);
 }
 footer{
-  background: url("/imgs/c10b6caece913474c800836db3de23a0.jpg") ;
+  background: url("imgs/c10b6caece913474c800836db3de23a0.jpg") ;
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center;
