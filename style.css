@@ -1,0 +1,276 @@
+
+:root{
+  --bg:#161A1D;
+  --bgs:#161B20;
+  --color:crimson;
+}
+::selection{
+  color:white;
+  background: crimson ;
+}
+::-webkit-scrollbar{
+  width:10px;
+}
+::-webkit-scrollbar-track{
+  background: #1E2324;
+}
+::-webkit-scrollbar-thumb{
+background: crimson;
+}
+*{
+  list-style: none;
+}
+a{
+  color:white;
+}
+body{
+    background:var(--bg);
+     color:white;
+     font-family: 'Raleway',sans-serif;
+ 
+}
+body>*:not(.landing ,nav,.scroll){
+  padding-top: 60px !important;
+  padding-bottom: 60px!important
+}
+
+.squ{
+  border-radius:0#282B2D
+}
+.btn-bdy{
+  border-radius: 0;
+  
+  background: crimson !important ;
+  color:white;
+  box-shadow: 0 0 20px crimson;
+  padding:5px 20px;
+  border:2px solid crimson;
+  cursor: pointer
+}
+.btn-bdy:hover , .scroll:hover{
+  background: transparent !important;
+  color: crimson;
+  border:2px solid crimson;
+  box-shadow:none;
+ 
+}
+
+.main-h{
+
+ position: relative;
+ width:fit-content;
+ font-size:1.8em;
+ font-weight: bold;
+ margin:20px auto;
+}
+.main-h::before{
+  content:"";
+  position: absolute;
+  width:120%;
+  height:3px;
+  background: linear-gradient(to right,#9C142B,var(--color));
+  bottom:-10px;
+  box-shadow:0px 0px 20px crimson;
+  left:50%;
+  transform: translateX(-50%)
+}
+nav{
+ 
+  
+  background: #161A1DB8;
+}
+
+nav *{
+
+  color:white !important
+  
+}
+nav .navbar-brand{
+  color: crimson !important;
+  font-size: 2.5em!important
+}
+.navbar-toggler{
+  box-shadow: none !important;
+  border: none !important;
+
+  
+}
+.navbar-toggler span{
+  width:30px;
+  height:1px;
+  display: block;
+  transition: .3s;
+  background:white;
+}
+.navbar-toggler.open span{
+transform: rotate(-45deg) translateY(-11px)
+}
+.navbar-toggler.open span:first-child{
+  transform:rotate(45deg) translateY(12px);
+}
+
+.landing{
+  display: flex;
+  justify-content: center; 
+  flex-direction: column;
+  height:calc(100vh - 72px);
+  color:white ;
+  background-color:var(--bg);
+  
+  background:url("imgs/Picsart_23-08-06_21-28-55-006.jpg");
+  background-position: left;
+  -webkit-background-size: cover;
+  background-size:cover;
+  
+   position: relative;
+  z-index:1;
+  
+}
+.landing::before{
+  content:"";
+  position: absolute;
+  width:100%;
+  height:100%;
+  background: var(--bg);
+  opacity: 90%;
+  z-index: -1;
+}
+
+.landing .text h1,.landing .text p{
+  margin-bottom: 20px;
+  
+}
+
+.about .name{
+  font-size:3em;
+  font-weight: 800;
+  text-align: center;
+  margin:40px 0;
+}
+.about .name:first-letter{
+  background-image: url("imgs/f4161637ec02334648eab20d837c7042.gif");
+  background-position: center;
+    -webkit-background-clip: text ;
+    background-clip: text ;
+    color: transparent ;
+-webkit-text-fill-color: transparent !important;
+    text-shadow:0 0 35px crimson;
+    font-family:'Roboto Mono',sans-serif
+  
+}
+.about ul li{
+    border-radius: 0;
+  background: transparent !important;
+  font-size: .9em;
+  padding: 20px;
+transition: .3s;
+  border:2px solid crimson;
+  margin-bottom: 10px;
+}
+.about ul li:hover{     
+  box-shadow:0px 0px 20px crimson;
+  
+}
+
+.portfolio {
+  background: var(--bgs);
+}
+
+.card-img{
+  height: 300px;
+  object-fit: cover
+}
+.skills .box{
+  padding:10px;
+  border-radius: 5px;
+  transition: .3s;
+  
+}
+.skills .box:hover{
+
+transform: translatey(-10px);
+background: crimson!important;
+color:black; 
+
+}
+.skills h5{
+  transition:.3s
+}
+.skills .box:hover h5{
+  letter-spacing: 5px;
+
+}
+
+
+input,textarea{
+  
+  color: white ;
+  outline: none;
+  border:4px solid transparent;
+  transition: .3s
+}
+
+textarea{
+  height:250px;
+}
+input:focus,textarea:focus{
+  border: 4px double crimson;
+}
+.contact{
+  background: var(--bgs);
+}
+footer{
+  background: url("/imgs/c10b6caece913474c800836db3de23a0.jpg") ;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  
+  z-index: 1
+}
+footer::before{
+  content:"";
+  width:100%;
+  height:100%;
+  position: absolute;
+  right:0;
+  top:0;
+  background: #000000C7;
+  
+  z-index: -1
+  
+}
+footer .container {
+  text-align: center;
+  line-height: 3;
+ 
+  
+}
+footer h1:first-letter{
+  color:#D0082A;
+ 
+  
+  
+}
+.scroll{
+  opacity:0;
+  pointer-events: none;
+  position: fixed;
+  bottom:50px;
+  right:20px;
+  z-index: 10000;
+  background: crimson;
+  width:40px;
+  height:40px;
+  color:white;
+    box-shadow: 0 0 20px crimson;
+    border:none;
+  transform: rotate(45deg);
+  transition: .3s;
+  cursor: pointer
+  
+}
+.scroll svg{
+transform: rotate(-45deg);
+
+}
